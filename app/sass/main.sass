@@ -67,6 +67,11 @@ li
 .h2
 	font-size: 36px
 	font-weight: normal
+.h3
+	font-size: 22px
+	font-weight: normal	
+.h4
+	font-size: 16px
 
 /*header*/
 .site-header
@@ -128,15 +133,232 @@ li
 
 .top-line
 	background-color: $main-fo
-	margin: 20px 0
-ul.sf-menu.sf-js-enabled
+ul.points-wrapper
 	overflow: hidden
 	padding-left: none
+	margin: 20px 0
 	>li
 		float: left
+		padding: 0 15px
+		border-right: 1px solid $main-color
+		line-height: 1
+		&:first-child
+			padding-left: 0px
+		&:last-child
+			border-right: none			
+		a
+			&:hover
+				color: $dark-blue
+				text-decoration: none
+
+//toggle-menu
+.toggle-mnu 
+  display: block
+  width: 28px
+  height: 28px
+  float: left
+
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+
+  span:after
+    top: 18px
+
+  span 
+    position: relative
+    display: block
+
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: $back
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
 
 
+  &.on span 
+    background-color: transparent
 
+  &.on span:before 
+    transform: rotate(45deg) translate(-1px, 0px)
 
+  &.on span:after 
+    transform: rotate(-45deg) translate(6px, -7px)
+//end-toggle-menu	
+
+//mobile-menu
+.mobile-menu
+	padding: 10px 15px 10px 15px
+	color: $back
+	cursor: pointer
+	background-color: $main-color
+	position: relati
+	z-index: 3
+	.toggle-mnu 
+		span:after, span:before
+			background-color: $back
+	b
+		display: block
+		margin-left: 40px
+		font-style: Italic		
+
+//slideshow
+.slideshow-head
+	border-bottom: 1px solid #e1e1e1	
+	margin-bottom: 100px	
+	background-image: url(/img/slider-bg-image.png)
+	background-position: center bottom
+	background-repeat: no-repeat
+.slideshow-container
+	.image-box
+		img
+			position: relative
+			animation: turning 3.5s ease-out						
+
+	.text-box
+		animation: rotation 3.5s ease-out
+		padding-left: 20px		
+		.h1
+			color: $main-color
+			font-weight: normal
+			line-height: 1
+			margin-top: 20px
+			margin-bottom: 20px
+		p
+			font-size: 16px
+			line-height: 1.4
+		a
+			color: $accent
+			font-size: 16px
+
+.owl-carousel-slide
+	margin: 0 70px
+
+@keyframes turning
+	0%
+		transform: scale(0, 0)
+		opacity: 0
+	50%
+		transform: scale(0.5, 0.5)
+		opacity: 0.5		
+	100%
+		transform: scale(1, 1)
+		opacity: 1
+
+@keyframes rotation
+	0%
+		-ms-transform: rotate(0deg)
+		-webkit-transform: rotate(0deg)
+		-o-transform: rotate(0deg)
+		-moz-transform: rotate(0deg)
+		transform: rotate(0deg)
+		opacity: 0
+	25%
+		-ms-transform: rotate(90deg)
+		-webkit-transform: rotate(90deg)
+		-o-transform: rotate(90deg)
+		-moz-transform: rotate(90deg)
+		transform: rotate(90deg)
+		opacity: 0.25		
+	50%
+		-ms-transform: rotate(180deg)
+		-webkit-transform: rotate(180deg)
+		-o-transform: rotate(180deg)
+		-moz-transform: rotate(180deg)
+		transform: rotate(180deg)
+		opacity: 0.5
+	75%
+		-ms-transform: rotate(270deg)
+		-webkit-transform: rotate(270deg)
+		-o-transform: rotate(270deg)
+		-moz-transform: rotate(270deg)
+		transform: rotate(270deg)
+		opacity: 0.75					
+	100%
+		-ms-transform: rotate(360deg)
+		-webkit-transform: rotate(360deg)
+		-o-transform: rotate(360deg)
+		-moz-transform: rotate(360deg)
+		transform: rotate(360deg)
+		opacity: 1		
+
+.slideshow-container	
+	padding: 50px 0 15px 0	
+	.owl-carousel
+		position: relative
+		.owl-nav
+			position: absolute
+			top: 40%
+			width: 100%
+			.owl-prev
+				float: left
+			.owl-next
+				float: right
+
+/*aboutUs-team*/
+.about-man
+	margin-bottom: 40px
+	.about-man-top
+		display: table
+		.table-cell
+			display: table-cell
+			.h4
+				margin-left: 10px
+				span
+					font-weight: normal
+	p
+		font-size: 13px
+		margin-top: 0px
+
+.about-man.man-flex
+	display: flex
+	flex-derection: row
+	justify-content: flex-start
+	align-items: flex-start
+	.photo
+		width: 27%
+		.photo-holder
+			padding: 4px
+			border: 1px solid #dfdfdf
+			max-width: 120px
+	.text
+		width: 73%
+		padding-left: 5px
+		.h4
+			margin-top: 7px 
+			margin-bottom: 9px
+
+/*reviews*/
+.reviews
+	background-image: url(/img/grad-top.png)
+	background-position: center top
+	background-repeat: no-repeat
+	margin-top: 50px
+	margin-bottom: 100px
+	&:hover
+		cursor: pointer
+	.container
+		background-image: url(/img/grad-bottom.png)
+		background-position: center bottom
+		background-repeat: no-repeat
+	p
+		color: $main-color
+		font-size: 22px
+		text-align: center
+
+/*projects-hold*/		
+.projects-hold
+	display: flex
+	flex-derection: row
+	justify-content: space-between
+	align-items: start
+	.projects-item
+		img
+			padding: 10px
+			border: 1px solid #dfdfdf
 
 @import "media" // Всегда в конце
