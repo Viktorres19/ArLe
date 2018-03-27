@@ -72,6 +72,10 @@ li
 	font-weight: normal	
 .h4
 	font-size: 16px
+.h5
+	font-size: 12px
+.h6
+	font-size: 14px
 
 /*header*/
 .site-header
@@ -350,15 +354,119 @@ ul.points-wrapper
 		font-size: 22px
 		text-align: center
 
-/*projects-hold*/		
+/*projects*/
+.projects
+	margin-bottom: 50px		
 .projects-hold
 	display: flex
 	flex-derection: row
 	justify-content: space-between
 	align-items: start
 	.projects-item
+		text-align: center
 		img
 			padding: 10px
 			border: 1px solid #dfdfdf
+			-webkit-box-shadow: 0px 11px 19px -9px rgba(0,0,0,0.75);
+			-moz-box-shadow: 0px 11px 19px -9px rgba(0,0,0,0.75);
+			box-shadow: 0px 11px 19px -9px rgba(0,0,0,0.75);
+		a
+			color: $accent
+			text-transform: uppercase
+			display: block
+			margin-top: 28px
+
+/*my-footer*/
+.footer-top
+	background-color: $main-fo
+	padding: 28px 0 18px 0
+	.footer-about
+		padding-right: 25px
+		img
+			padding: 4px
+			border: 1px solid #ddd
+	.col-sm-3
+		overflow: hidden
+	.h5
+		color: $main-color
+	p
+		color: #989898
+	a.right
+		color: $accent
+		float: right
+	.footer-links
+		li
+			padding: 4px 0 4px 0
+			border-bottom: 1px solid #d4d4d4
+			&:first-child
+				padding-top: 0px
+			a
+				color: $accent
+				padding-left: 20px
+				background-image: url(/img/footer-mini-bg.png)
+				background-repeat: no-repeat 	
+				background-position: 2px 4px
+
+	.footer-posts
+		padding-right: 25px
+		.post
+			overflow: hidden
+			.h6
+				color: #989898
+				margin: 5px 0 0 0 
+			p
+				line-height: 1.3
+			p.small
+				font-size: 10px
+				margin: 0
+				line-height: 1
+				span
+					color: $accent
+
+form.callback
+	input, textarea
+		border: none
+		background-color: #ddd
+		border-radius: 5px
+		width: 100%
+		margin-bottom: 10px
+		padding: 5px 0px 5px 10px
+	textarea
+		height: 110px
+	.button
+		border: none
+		background-color: #ddd
+		border-radius: 5px
+		margin-bottom: 10px
+		color: $accent
+		padding: 6px 12px
+		font-size: 13px
+		font-weight: bold
+
+.success
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	text-transform: uppercase
+	font-weight: bold
+	display: flex
+	z-index: 10
+	display: none
+	span
+		margin: auto
+	& ~ *
+		transition: all .5s ease
+	&.active
+		& ~ *
+			opacity: .5
+			filter: blur(10px)
+
+
+
+
+.footer-bottom
+	background-color: #d4d4d4	
 
 @import "media" // Всегда в конце
