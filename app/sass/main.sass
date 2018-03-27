@@ -1,0 +1,142 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: $main-color
+	opacity: 1
+
+*:-moz-placeholder
+	color: $main-color
+	opacity: 1
+
+*::-moz-placeholder
+	color: $main-color
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: $main-color
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: $main-color
+body input:required:valid,
+body textarea:required:valid
+	color: $main-color
+
+html, body
+	height: 100%
+
+body
+	font-size: 12px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: Georgia, serif
+	overflow-x: hidden
+	opacity: 1
+	background-color: $back
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+a
+	color: $main-color
+a:hover
+	color: $main-color
+
+ul
+	-webkit-padding-start: 0px
+li
+	list-style-type: none	
+
+.h1 
+	font-size: 56px
+.h2
+	font-size: 36px
+	font-weight: normal
+
+/*header*/
+.site-header
+	border-top: 5px solid $accent
+.top-pannel
+	padding: 35px 0 40px 0
+	a
+		.h2
+			line-height: 1
+			margin: 0
+			span
+				font-size: 46px
+		p
+			color: $main-lighter
+			margin: 0
+	a:hover
+		text-decoration: none	
+	.social
+		margin-top: 25px
+		li
+			display: inline-block
+			border-radius: 50%
+			background-color: $main-da
+			width: 25px
+			height: 25px
+			margin: 0 8px 0 0
+			transition: background-color 1s ease
+			&:hover
+				background-color: $accent
+			a
+				color: $back
+				font-size: 16px
+				text-align: center
+				margin-left: 6.5px
+
+.search-form
+	position: relative
+	margin-top: 25px
+	.search-field
+	  background-color: $main-da
+	  border: none
+	  border-radius: 20px
+	  cursor: pointer
+	  height: 25px
+	  width: 165px
+	  padding: 0 34px 0 10px 
+	  -webkit-transition: width 400ms ease, background 400ms ease
+	  transition: width 400ms ease, background 400ms ease
+	  z-index: 1001
+	.search-form-mark
+		position: absolute
+		top: 3px
+		right: 20px
+		color: $accent
+		background-color: $back
+		border-radius: 50%
+		width: 20px
+		text-align: center
+
+.top-line
+	background-color: $main-fo
+	margin: 20px 0
+ul.sf-menu.sf-js-enabled
+	overflow: hidden
+	padding-left: none
+	>li
+		float: left
+
+
+
+
+
+@import "media" // Всегда в конце
